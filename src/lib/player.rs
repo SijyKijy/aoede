@@ -39,6 +39,7 @@ pub struct SpotifyPlayer {
     pub spirc: Option<Box<Spirc>>,
     pub event_channel: Option<Arc<tokio::sync::Mutex<PlayerEventChannel>>>,
     mixer: Box<SoftMixer>,
+    pub bot_name: String,
 }
 
 pub struct EmittedSink {
@@ -215,6 +216,7 @@ impl SpotifyPlayer {
         password: String,
         quality: Bitrate,
         cache_dir: Option<String>,
+        bot_name: String,
     ) -> SpotifyPlayer {
         let credentials = Credentials::with_password(username, password);
 
@@ -265,12 +267,13 @@ impl SpotifyPlayer {
             spirc: None,
             event_channel: Some(Arc::new(tokio::sync::Mutex::new(rx))),
             mixer,
+            bot_name,
         }
     }
 
     pub async fn enable_connect(&mut self) {
         let config = ConnectConfig {
-            name: "Aoede".to_string(),
+            name: self.bot_name.clone(),
             device_type: DeviceType::AudioDongle,
             initial_volume: None,
             has_volume_ctrl: true,
