@@ -18,6 +18,8 @@ pub struct Config {
     pub guild_id: u64,
     #[serde(alias = "SPOTIFY_BOT_USERNAME")]
     pub spotify_bot_username: String,
+    #[serde(alias = "SPOTIFY_BOT_AUTOPLAY")]
+    pub spotify_bot_autoplay: bool,
 }
 
 impl Config {

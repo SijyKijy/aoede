@@ -4,3 +4,4 @@ SPOTIFY_PASSWORD="your spotify password"
 DISCORD_USER_ID="your discord id here"
 GUILD_ID="your discord guild id"
 SPOTIFY_BOT_USERNAME="your spotify bot name"
+SPOTIFY_BOT_AUTOPLAY=true

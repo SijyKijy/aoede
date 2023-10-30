@@ -46,6 +46,7 @@ services:
       - DISCORD_USER_ID=     # Discord user ID of the user you want Aoede to follow
       - GUILD_ID=     # Discord guild ID
       - SPOTIFY_BOT_USERNAME=
+      - SPOTIFY_BOT_AUTOPLAY=
 ```
 
 ### Docker:
@@ -57,6 +58,7 @@ SPOTIFY_PASSWORD="my password"
 DISCORD_USER_ID=111111111111111111
 GUILD_ID=1111111111111111111
 SPOTIFY_BOT_USERNAME="Aoede"
+SPOTIFY_BOT_AUTOPLAY=true
 ```
 
 ```bash

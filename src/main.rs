@@ -349,6 +349,7 @@ async fn main() {
             Bitrate::Bitrate320,
             cache_dir,
             config.spotify_bot_username.clone(),
+            config.spotify_bot_autoplay,
         )
         .await,
     ));
